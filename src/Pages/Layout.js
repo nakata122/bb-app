@@ -20,7 +20,7 @@ function Layout() {
       <>
         <header>
           <p>{user ? 'Naiden':'Elly'}</p>
-          <img src='/settings.png' alt="Settings" onClick={changeUser}/>
+          <img src='./settings.png' alt="Settings" onClick={changeUser}/>
         </header>
 
         <Outlet />
