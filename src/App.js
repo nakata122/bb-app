@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter basename='https://nakata122.github.io/bb-app/'>
+    <BrowserRouter basename='bb-app'>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
