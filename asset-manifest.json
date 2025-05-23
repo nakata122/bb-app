@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.587c10c6.css",
-    "main.js": "./static/js/main.8e0b2edc.js",
-    "static/media/flower.avif": "./static/media/flower.6e64d544a3f55b44ff97.avif",
-    "service-worker.js": "./service-worker.js",
-    "static/media/logo.svg": "./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "./index.html",
-    "main.587c10c6.css.map": "./static/css/main.587c10c6.css.map",
-    "main.8e0b2edc.js.map": "./static/js/main.8e0b2edc.js.map"
+    "main.css": "/bb-app/static/css/main.5adb4d53.css",
+    "main.js": "/bb-app/static/js/main.d38ad0fe.js",
+    "static/media/flower.avif": "/bb-app/static/media/flower.6e64d544a3f55b44ff97.avif",
+    "service-worker.js": "/bb-app/service-worker.js",
+    "static/media/logo.svg": "/bb-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/bb-app/index.html",
+    "main.5adb4d53.css.map": "/bb-app/static/css/main.5adb4d53.css.map",
+    "main.d38ad0fe.js.map": "/bb-app/static/js/main.d38ad0fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.587c10c6.css",
-    "static/js/main.8e0b2edc.js"
+    "static/css/main.5adb4d53.css",
+    "static/js/main.d38ad0fe.js"
   ]
 }
