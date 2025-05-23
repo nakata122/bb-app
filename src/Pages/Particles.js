@@ -29,14 +29,6 @@ function Particles(e) {
                 }
             }
 
-            fetch('https://fcm.googleapis.com//v1/projects/1049861725003/messages:send', {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ya29.a0AW4Xtxgy3sT5rWD3d7OBm4eZGKlTh6IA5MVRDlm-y3fLDJSXwv1moPpMKnoKYu3SnE8XeWK81FWBaJLNtPII4_e6RXuh3T1_kW6KDNNFwqAM2zAlt95e8u1cC_f6_oB6PPoFHH5bAd_4FmIAa6yUG_yzO8fE-LzX0Aq6uYsVaCgYKAdcSARYSFQHGX2MijbI6WW6KHvtZn7U9Dt9byw0175'
-                },
-                method: 'POST',
-                body: JSON.stringify(body)
-            }).then(res => res.json()).then(data => console.log(data))
         })
     })
 
