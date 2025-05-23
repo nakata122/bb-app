@@ -16,6 +16,7 @@ import Music from './Pages/Music/Music';
 import MusicCreate from './Pages/Music/MusicCreate';
 import Videos from './Pages/Videos/Videos';
 import VideosCreate from './Pages/Videos/VideosCreate';
+import { HashRouter } from "react-router-dom";
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter basename='/bb-app/'>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -44,7 +45,7 @@ function App() {
           <Route path="Videos/Create" element={<VideosCreate />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
