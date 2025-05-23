@@ -18,11 +18,16 @@ const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 const messaging = getMessaging(app);
 
+
+
 const generateToken = async () => {
   const permission = await Notification.requestPermission();
   if(permission !== 'granted') return;
 
+  const registration = await navigator.serviceWorker.register('/bb-app/firebase-messaging-sw.js');
+
   const token = await getToken(messaging, {
+    serviceWorkerRegistration: registration,
     vapidKey: 'BORPSoEXDJn9BJog-nMwp0A9qBqPJ-53UexK7cYzVep4eCtwrwpJfvVyD-M9N2a5BHaZNpDUi4C9oockgDQjhOc'
   });
   localStorage.setItem('token', token);

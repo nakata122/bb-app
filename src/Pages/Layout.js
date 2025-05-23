@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 function Layout() {
   const [user, setUser] = useState(0);
 
-  if(localStorage.getItem('user') === '')
+  if(localStorage.getItem('user') === '' || localStorage.getItem('user') === 'NaN')
     localStorage.setItem('user', 0);
 
   useEffect(() => {

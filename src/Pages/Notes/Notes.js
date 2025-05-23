@@ -4,6 +4,7 @@ import { firestore } from '../../firebase';
 import { addDoc, getDocs, collection, query, orderBy } from 'firebase/firestore';
 import NoteItem from './NoteItem';
 import NavItem from '../NavItem';
+import { Link } from 'react-router-dom';
 
 function Notes() {
     const ref = collection(firestore, 'notes');
@@ -36,7 +37,7 @@ function Notes() {
         <>
             <h1>Notes</h1>
             <div className='Navigation'>
-                <a href='Notes/Create' className="navItem"><img src='Add.png'></img>Add</a>
+                <Link to='Create' className="navItem"><img src='Add.png'></img>Add</Link>
                 {notes?.map(({id, data}) => <NoteItem data={data} id={id} />)}
             </div>
         </>

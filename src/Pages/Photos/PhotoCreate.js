@@ -45,7 +45,7 @@ function PhotoCreate() {
                 <label htmlFor="fileInput">
                     Upload
                     <br />
-                    <img src="/Add.png" alt="Upload" />
+                    <img src="Add.png" alt="Upload" />
                 </label>
                 <input type="file" id="fileInput" accept="image/*" style={{display: 'none'}} ref={file} required/>
 

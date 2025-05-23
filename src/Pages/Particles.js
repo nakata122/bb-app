@@ -4,7 +4,7 @@ import {collection, getDocs, where, query } from "firebase/firestore";
 import { firestore } from '../firebase'
 
 const images = ['./heart.png', './heart2.png', './cow.jpg', './piggy.png'];
-let timeout;
+let timeout, timeNoti;
 function myTimeout() {
     timeout = setTimeout(() => {
         document.getElementById('attention').classList.remove('animate');
@@ -14,23 +14,24 @@ function myTimeout() {
 
 function Particles(e) {
     
-
-    const q = query(collection(firestore, 'users'), where('key', '!=', localStorage.getItem('token')));
-    getDocs(q)
-        .then(data => {
-            data.forEach(other => {
-            let body = {
-                "message": {
-                    "token": other.data().key,
-                    "notification": {
-                        "title": "BB SEEKS ATTENTION",
-                        "body": "Go text her NOW"
-                    }
-                }
-            }
-
-        })
-    })
+    if(!timeNoti)
+    {
+        timeNoti = setTimeout(()=>{timeNoti = 0}, 10000);
+        const q = query(collection(firestore, 'users'), where('key', '!=', localStorage.getItem('token')));
+        getDocs(q)
+            .then(data => {
+                data.forEach(other => {
+                    fetch('https://c9e48b26-long-truth-1a85.redspot122.workers.dev?token=' + other.data().key, {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        mode: 'no-cors',
+                        method: 'GET'
+                    })
+                })
+            });
+    }
+    
 
 
 
@@ -48,7 +49,7 @@ function Particles(e) {
         element.src = images[Math.floor(images.length * Math.random())];
         element.className = 'flying';
 
-        const size = (Math.random() * 100) + 50;
+        const size = (Math.random() * 50) + 20;
         const duration = (Math.random() + 0.5);
         element.style.width = size + 'px';
         element.style.height = size + 'px';

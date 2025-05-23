@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { firestore } from '../../firebase';
 import { addDoc, getDocs, collection, query, orderBy } from 'firebase/firestore';
 import MusicItem from './MusicItem';
+import { Link } from 'react-router-dom';
 
 function Music() {
     const [music, setMusic] = useState([]);
@@ -33,7 +34,7 @@ function Music() {
         <>
             <h1>Music</h1>
             <div className='Navigation'>
-                <a href='Music/Create' className="navItem"><img src='Add.png' alt='Add'></img>Add</a>
+                <Link to='Create' className="navItem"><img src='Add.png' alt='Add'></img>Add</Link>
                 
                 {music?.map(({id, title}) => <MusicItem id={id} title={title}/>)}
             </div>

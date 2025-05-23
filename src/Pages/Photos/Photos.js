@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { firestore } from '../../firebase';
 import { addDoc, getDocs, collection, query, orderBy } from 'firebase/firestore';
 import PhotoItem from './PhotoItem';
+import { Link } from 'react-router-dom';
 
 function Photos() {
     const [photos, setPhotos] = useState([]);
@@ -33,7 +34,7 @@ function Photos() {
         <>
             <h1>Photos</h1>
             <div className='Navigation'>
-                <a href='Photos/Create' className="navItem"><img src='Add.png' alt='Add'></img>Add</a>
+                <Link to='Create' className="navItem"><img src='Add.png' alt='Add'></img>Add</Link>
                 
                 {photos?.map(({id, title}) => <PhotoItem id={id} title={title} />)}
                 <div id="myModal" className="modal">

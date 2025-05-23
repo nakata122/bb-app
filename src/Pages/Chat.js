@@ -29,17 +29,22 @@ function Chat() {
     
     useEffect(() => {
         getMessages();
+        setInterval(() => {
+            getMessages();
+        }, 5000)
     }, [once]);
 
     useEffect(() => {
         var objDiv = document.getElementById('chatBox');
         objDiv.scrollTop = objDiv.scrollHeight;
-    }, [messages])
+    }, [messages]);
+
 
     const submitMessage = e => {
         e.preventDefault();
         addDoc(ref, {data: textInput.current.value, author: parseInt(localStorage.getItem('user')), date: Date.now()})
             .then(() => {
+                textInput.current.value = '';
                 getMessages();
             });
     }

@@ -45,7 +45,7 @@ function MusicCreate() {
                 <label htmlFor="fileInput">
                     Upload
                     <br />
-                    <img src="/Add.png" alt="Upload" />
+                    <img src="Add.png" alt="Upload" />
                 </label>
                 <input type="file" accept="video/mp4,video/*" id="fileInput" style={{display: 'none'}} ref={file} required/>
 
