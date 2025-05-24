@@ -250,7 +250,7 @@ h1 {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 3; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -267,6 +267,7 @@ h1 {
   display: block;
   width: 80%;
   max-width: 700px;
+  z-index: 3; /* Sit on top */
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -279,6 +280,7 @@ h1 {
   color: #ccc;
   padding: 10px 0;
   height: 150px;
+  z-index: 3; /* Sit on top */
 }
 
 /* Add Animation - Zoom in the Modal */
