@@ -35,8 +35,9 @@ function Photos() {
             <h1>Photos</h1>
             <div className='Navigation'>
                 <Link to='Create' className="navItem"><img src='Add.png' alt='Add'></img>Add</Link>
-                
-                {photos?.map(({id, title}) => <PhotoItem id={id} title={title} />)}
+                <ul className='gallery'>
+                    {photos?.map(({id, title}) => <PhotoItem id={id} title={title} />)}
+                </ul>
                 <div id="myModal" className="modal">
                     <span className="close" onClick={() => {document.getElementById('myModal').style.display = "none";}}>&times;</span>
                     <img className="modal-content" id="modalImg" alt='img'/>

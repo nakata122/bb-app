@@ -150,13 +150,14 @@ header img {
   -moz-border-radius: 28;
   border-radius: 28px;
   border-style: solid;
-  padding: 20px;
+  padding: 5px;
   margin: 10px;
-  font-size: 5vw;
+  font-size: 30px;
   color: #FFFFFF;
   font-weight: bold;
   text-decoration: none;
   aspect-ratio : 1 / 1;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -190,14 +191,14 @@ h1 {
   -moz-border-radius: 28;
   border-radius: 28px;
   border-style: solid;
-  padding: 25px;
+  padding: 5px;
   margin: 10px;
   color: #FFFFFF;
   font-weight: bold;
   text-decoration: none;
   /* max-height: 250px;
   overflow: hidden; */
-  aspect-ratio : 1 / 1;
+  aspect-ratio : 1;
 }
 
 .noteItem h2 {
@@ -383,4 +384,35 @@ h1 {
 
 video {
   width: 100%;
+}
+
+.gallery {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.gallery li {
+  height: 25vh;
+  flex-grow: 1;
+  margin: 1vmin;
+  /* height: auto; */
+  /* width: 100%; */
+}
+
+.gallery img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.gallery h2 {
+  background: rgba(248, 93, 134, 0.5);
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
+  width: inherit;
+  top: -30px;
 }

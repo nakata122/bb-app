@@ -19,7 +19,7 @@ function PhotoItem({id, title}) {
         modalTitle.innerHTML = title;
     }
 
-    return (<div className="navItem" onClick={clicked}><AdvancedImage cldImg={cld.image(id)} /> {title}</div>);
+    return (<li onClick={clicked}><AdvancedImage cldImg={cld.image(id)} /> <h2>{title}</h2></li>);
 }
 
 export default PhotoItem;
